@@ -25,11 +25,9 @@ class Clock {
         this.time = new moment();
     }
     getKioskDateTime() {
-        // KioskDateTime=2019-07-20T02:42:11.712
         return this.time.format("YYYY-MM-DDTHH:mm:ss.SSS");
     }
     getLoadStampTime() {
-        // LoadStamp=2019-07-20+02:34:32
         return this.time.format("YYYY-MM-DD+HH:mm:ss");
     }
 
@@ -49,9 +47,13 @@ class Clock {
         }
 
         let encodedData = this.convertToUrlEncodedString(punchData);
+        response = '';
         axios.post(this.punchUrl, encodedData, {headers: punchHeaders})
             .then((res) => {
-                console.log(res);
+                response = res;
+            })
+            .catch((error) => {
+                console.error(error);
             })
     }
     convertToUrlEncodedString(params){
