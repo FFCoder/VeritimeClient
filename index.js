@@ -55,6 +55,7 @@ class Clock {
             .catch((error) => {
                 console.error(error);
             })
+            return response;
     }
     convertToUrlEncodedString(params){
         return Object.keys(params).map(key => key + '=' + params[key]).join('&');
@@ -62,5 +63,3 @@ class Clock {
     
 
 }
-let clock = new Clock();
-clock.Punch(1234,4444);
