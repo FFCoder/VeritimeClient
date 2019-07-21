@@ -1,0 +1,11 @@
+{
+  "name": "veritime",
+  "version": "1.0.0",
+  "description": "A NPM Module for Interacting with a Veritime Timeclock",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
